@@ -26,7 +26,7 @@ implementation{
 		for(;i<6;i++){
 			total=total+measures[i];
 		}
-		signal TmpCollector.readDone(SUCCESS,(uint16_t)total/6);
+		signal TmpCollector.readDone(SUCCESS,(uint16_t)(total/6));
 	}
 
 	command error_t TmpCollector.read(){

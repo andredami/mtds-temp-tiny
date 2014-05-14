@@ -53,7 +53,7 @@ implementation{
 		}
 	}
 	void respondToSingleRequest(){
-		dbg("default","%s | NODE %d: Reading measure.\n",  sim_time_string(),TOS_NODE_ID);
+		dbg("default","%s | NODE %d: Reading average.\n",  sim_time_string(),TOS_NODE_ID);
 		//read and compute the average
 		call TmpAverageRead.read();
 	}
@@ -66,7 +66,7 @@ implementation{
 	
 
 	void onTmpMessageReceived(uint8_t nodeid,uint16_t measure){
-		dbg("default","%s | SINK %d: Received measure from %d , value:%f\n", sim_time_string(),TOS_NODE_ID, nodeid,measure);
+		dbg("default","%s | SINK %d: Received average from %d , value:%d\n", sim_time_string(),TOS_NODE_ID, nodeid,measure);
 	}
 
 	void onTmpRequestReceived(uint16_t nodeid){
@@ -91,7 +91,7 @@ implementation{
 			msg->measure=val;
 			msg->nodeid=TOS_NODE_ID;
 			if (call AMSend.send(AM_BROADCAST_ADDR,&pkt, sizeof(TmpMessage)) == SUCCESS) {
-				dbg("default","%s | NODE %d: sent measure, value:%d\n", sim_time_string(),TOS_NODE_ID, val);
+				dbg("default","%s | NODE %d: sent average, value:%d\n", sim_time_string(),TOS_NODE_ID, val);
         		busy = TRUE;
       		}
 		}
