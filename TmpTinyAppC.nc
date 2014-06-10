@@ -20,10 +20,10 @@ implementation{
 	App.MessageTimer->MessageTimer;
 	App.DelayTimer->DelayTimer;
 	App.Packet -> AMSenderC;
-  	App.AMControl -> ActiveMessageC;
-  	App.AMSend -> AMSenderC;
-  	App.Rand -> RandomC;
-  	App.Receive -> AMReceiverC;
+  App.AMControl -> ActiveMessageC;
+  App.AMSend -> AMSenderC;
+  App.Rand -> RandomC;
+  App.Receive -> AMReceiverC;
 	
 	TmpSensor.Random->RandomC;
 

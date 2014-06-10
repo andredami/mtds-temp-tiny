@@ -48,7 +48,7 @@ implementation{
 			if (call AMSend.send(AM_BROADCAST_ADDR,&pkt, sizeof(TmpRequest)) == SUCCESS) {
 	       		busy = TRUE;
 	       		dbg("default","%s | SINK %d message sent to %d\n",sim_time_string(),TOS_NODE_ID,msg->nodeid);
-	      	}
+	    }
 			
 		}
 	}
