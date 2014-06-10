@@ -11,7 +11,7 @@ typedef nx_struct TmpRequest_s{
 
 typedef nx_struct TmpMessage_s{
 	nx_uint16_t nodeid;
-	nx_uint16_t measure;
+	nx_uint32_t measure;
 }TmpMessage;
 #endif
 

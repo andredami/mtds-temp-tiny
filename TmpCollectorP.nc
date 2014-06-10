@@ -1,12 +1,12 @@
 module TmpCollectorP {
-	provides interface Read<uint16_t> as TmpCollector;
+	provides interface Read<float> as TmpAverage;
 	provides interface StdControl;
-	uses interface Read<uint16_t> as TmpRead;
+	uses interface Read<float> as TmpRead;
 	uses interface Timer<TMilli> as ReadTimer;
 }
 implementation{
 
-	uint16_t measures[6];
+	float measures[6];
 	uint8_t current_index;
 
 	command error_t StdControl.start(){
@@ -22,14 +22,14 @@ implementation{
 
 	task void computeAverage(){
 		uint8_t i=0;
-		uint16_t total=0;
+		float total=0;
 		for(;i<6;i++){
 			total=total+measures[i];
 		}
-		signal TmpCollector.readDone(SUCCESS,(uint16_t)(total/6));
+		signal TmpAverage.readDone(SUCCESS, total/6.0);
 	}
 
-	command error_t TmpCollector.read(){
+	command error_t TmpAverage.read(){
 		post computeAverage();
 		return SUCCESS;
 	}
@@ -38,7 +38,7 @@ implementation{
 		call TmpRead.read();
 	}
 
-	event void TmpRead.readDone(error_t err,uint16_t measure){
+	event void TmpRead.readDone(error_t err,float measure){
 		if(err == SUCCESS){
 			current_index++;
 			current_index = current_index % 6;

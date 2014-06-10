@@ -3,7 +3,7 @@
 module TmpTinyC{
 	uses interface Boot;
 	uses interface StdControl as TmpControl;
-	uses interface Read<uint16_t> as TmpAverageRead;
+	uses interface Read<float> as TmpAverageRead;
 	uses interface Timer<TMilli> as MessageTimer;
 	uses interface Timer<TMilli> as DelayTimer;
 	uses interface Packet;
@@ -65,8 +65,8 @@ implementation{
 	}
 	
 
-	void onTmpMessageReceived(uint8_t nodeid,uint16_t measure){
-		dbg("default","%s | SINK %d: Received average from %d , value:%d\n", sim_time_string(),TOS_NODE_ID, nodeid,measure);
+	void onTmpMessageReceived(uint8_t nodeid,uint32_t measure){
+		dbg("default","%s | SINK %d: Received average from %d , value:%g\n", sim_time_string(),TOS_NODE_ID, nodeid,*(float*)&measure);
 	}
 
 	void onTmpRequestReceived(uint16_t nodeid){
@@ -84,14 +84,16 @@ implementation{
 		respondToSingleRequest();
 	}
 
-	event void TmpAverageRead.readDone(error_t result,uint16_t val){
+	event void TmpAverageRead.readDone(error_t result,float val){
 		//send the packet TmpMessage which contains the measure
+		uint32_t meas_to_send;
+		*(float*)&meas_to_send=val;
 		if(result==SUCCESS){
 			TmpMessage* msg=(TmpMessage*) call Packet.getPayload(&pkt,sizeof(TmpMessage));
-			msg->measure=val;
+			msg->measure=meas_to_send;
 			msg->nodeid=TOS_NODE_ID;
 			if (call AMSend.send(AM_BROADCAST_ADDR,&pkt, sizeof(TmpMessage)) == SUCCESS) {
-				dbg("default","%s | NODE %d: sent average, value:%d\n", sim_time_string(),TOS_NODE_ID, val);
+				dbg("default","%s | NODE %d: sent average, value:%g\n", sim_time_string(),TOS_NODE_ID, val);
         		busy = TRUE;
       		}
 		}
@@ -109,11 +111,11 @@ implementation{
 		//if node 0 write the received tmp
 		dbg("default","%s | NODE %d: message received\n",sim_time_string(),TOS_NODE_ID);
 		if (TOS_NODE_ID==0&&len==sizeof(TmpMessage)){
-			TmpMessage* measpck= (TmpMessage*) payload;
-			onTmpMessageReceived(measpck->nodeid,measpck->measure);
+			TmpMessage* meas_pck= (TmpMessage*) payload;
+			onTmpMessageReceived(meas_pck->nodeid,meas_pck->measure);
 		}else if (len ==sizeof(TmpRequest)){
-			TmpRequest* reqpck= (TmpRequest*) payload;
-			onTmpRequestReceived(reqpck->nodeid);
+			TmpRequest* req_pck= (TmpRequest*) payload;
+			onTmpRequestReceived(req_pck->nodeid);
 		}
 		return msg;
 	}
