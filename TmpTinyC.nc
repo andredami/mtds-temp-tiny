@@ -7,10 +7,10 @@ module TmpTinyC{
 	uses interface Timer<TMilli> as MessageTimer;
 	uses interface Timer<TMilli> as DelayTimer;
 	uses interface Packet;
-  	uses interface AMSend;
-  	uses interface Receive;
-  	uses interface SplitControl as AMControl;
-  	uses interface Random as Rand;
+  uses interface AMSend;
+  uses interface Receive;
+  uses interface SplitControl as AMControl;
+  uses interface Random as Rand;
 }
 
 implementation{
@@ -38,8 +38,8 @@ implementation{
 	}
 	
 
-	event void MessageTimer.fired(){
-		
+	event void MessageTimer.fired(){	
+		dbg_clear("default","\n\n");
 		dbg("default","%s | SINK %d message timer fired\n",sim_time_string(),TOS_NODE_ID);
 		if(!busy){
 			uint16_t nodeid = (call Rand.rand16()) % NUMBER_OF_NODES;				
@@ -55,7 +55,9 @@ implementation{
 	void respondToSingleRequest(){
 		dbg("default","%s | NODE %d: Reading average.\n",  sim_time_string(),TOS_NODE_ID);
 		//read and compute the average
-		call TmpAverageRead.read();
+		if(call TmpAverageRead.read()==FAIL){
+			dbg("default","%s | NODE %d: TmpCollector not ready!\n", sim_time_string(),TOS_NODE_ID);
+		}
 	}
 
 	void respondToBroadcastRequest(){
@@ -100,20 +102,22 @@ implementation{
 	}
 	
 	event void AMSend.sendDone(message_t* msg, error_t err) {
-    	if (&pkt == msg) busy = FALSE;
-    	//dbg("default","%s | NODE %d: send done\n",sim_time_string(),TOS_NODE_ID);
+    if (&pkt == msg) busy = FALSE;
+    //dbg("default","%s | NODE %d: send done\n",sim_time_string(),TOS_NODE_ID);
  		if(err==FAIL){
  			dbgerror("error", "%s | NODE %d: error send has failed!!!\n", sim_time_string(),TOS_NODE_ID);
  		}
-  	}
+  }
 
-  	event message_t* Receive.receive(message_t* msg, void* payload, uint8_t len){
+  event message_t* Receive.receive(message_t* msg, void* payload, uint8_t len){
 		//if node 0 write the received tmp
-		dbg("default","%s | NODE %d: message received\n",sim_time_string(),TOS_NODE_ID);
+		
 		if (TOS_NODE_ID==0&&len==sizeof(TmpMessage)){
+		//	dbg("default","%s | SINK %d: TmpMessage received\n",sim_time_string(),TOS_NODE_ID);
 			TmpMessage* meas_pck= (TmpMessage*) payload;
 			onTmpMessageReceived(meas_pck->nodeid,meas_pck->measure);
 		}else if (len ==sizeof(TmpRequest)){
+		//	dbg("default","%s | NODE %d: TmpRequest received\n",sim_time_string(),TOS_NODE_ID);
 			TmpRequest* req_pck= (TmpRequest*) payload;
 			onTmpRequestReceived(req_pck->nodeid);
 		}

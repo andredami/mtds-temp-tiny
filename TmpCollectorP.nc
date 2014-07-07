@@ -5,7 +5,7 @@ module TmpCollectorP {
 	uses interface Timer<TMilli> as ReadTimer;
 }
 implementation{
-
+	bool ready=FALSE;
 	float measures[6];
 	uint8_t current_index;
 
@@ -30,6 +30,9 @@ implementation{
 	}
 
 	command error_t TmpAverage.read(){
+		if(!ready){
+			return FAIL;
+		}
 		post computeAverage();
 		return SUCCESS;
 	}
@@ -43,6 +46,9 @@ implementation{
 			current_index++;
 			current_index = current_index % 6;
 			measures[current_index]=measure;
+			if(!ready && current_index==0){
+				ready=TRUE;
+			}
 		}
 	}
 

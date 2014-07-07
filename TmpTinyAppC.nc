@@ -5,7 +5,6 @@ implementation{
 	components MainC;
 	components TmpTinyC as App;
 	components RandomC;
-	components new TimerMilliC() as ReadTimer;
 	components new TimerMilliC() as DelayTimer;
 	components new TimerMilliC() as MessageTimer;
 	components ActiveMessageC;

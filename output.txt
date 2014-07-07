@@ -1,0 +1,443 @@
+Booting  0  at ~  0 ms
+Booting  1  at ~  10 ms
+Booting  2  at ~  20 ms
+Booting  3  at ~  30 ms
+----------------------------------SIMULATION: ~ 0  s ----------------------
+DEBUG (0): 0:0:0.000000000 | Node 0 started
+DEBUG (0): 0:0:0.000000010 | Node 0 AMControl.startDone()
+DEBUG (0): 0:0:0.000000010 | SINK 0 starting message timer
+DEBUG (1): 0:0:0.010000000 | Node 1 started
+DEBUG (1): 0:0:0.010000000 | Node 1 started tmp collector
+DEBUG (1): 0:0:0.010000010 | Node 1 AMControl.startDone()
+DEBUG (2): 0:0:0.020000000 | Node 2 started
+DEBUG (2): 0:0:0.020000000 | Node 2 started tmp collector
+DEBUG (2): 0:0:0.020000010 | Node 2 AMControl.startDone()
+DEBUG (3): 0:0:0.030000000 | Node 3 started
+DEBUG (3): 0:0:0.030000000 | Node 3 started tmp collector
+DEBUG (3): 0:0:0.030000010 | Node 3 AMControl.startDone()
+
+
+DEBUG (0): 0:0:4.882812510 | SINK 0 message timer fired
+DEBUG (0): 0:0:4.882812510 | SINK 0 message sent to 3
+DEBUG (3): 0:0:4.884826658 | NODE 3: Reading average.
+DEBUG (3): 0:0:4.884826658 | NODE 3: TmpCollector not ready!
+
+
+DEBUG (0): 0:0:9.765625010 | SINK 0 message timer fired
+DEBUG (0): 0:0:9.765625010 | SINK 0 message sent to 1
+DEBUG (1): 0:0:9.774215658 | NODE 1: Reading average.
+DEBUG (1): 0:0:9.774215658 | NODE 1: TmpCollector not ready!
+----------------------------------SIMULATION: ~ 10  s ----------------------
+
+
+DEBUG (0): 0:0:14.648437510 | SINK 0 message timer fired
+DEBUG (0): 0:0:14.648437510 | SINK 0 message sent to 1
+DEBUG (1): 0:0:14.658737132 | NODE 1: Reading average.
+DEBUG (1): 0:0:14.658737132 | NODE 1: TmpCollector not ready!
+
+
+DEBUG (0): 0:0:19.531250010 | SINK 0 message timer fired
+DEBUG (0): 0:0:19.531250010 | SINK 0 message sent to 2
+DEBUG (2): 0:0:19.534866321 | NODE 2: Reading average.
+DEBUG (2): 0:0:19.534866321 | NODE 2: TmpCollector not ready!
+----------------------------------SIMULATION: ~ 20  s ----------------------
+
+
+DEBUG (0): 0:0:24.414062510 | SINK 0 message timer fired
+DEBUG (0): 0:0:24.414062510 | SINK 0 message sent to 2
+DEBUG (2): 0:0:24.421218840 | NODE 2: Reading average.
+DEBUG (2): 0:0:24.421218840 | NODE 2: TmpCollector not ready!
+
+
+DEBUG (0): 0:0:29.296875010 | SINK 0 message timer fired
+DEBUG (0): 0:0:29.296875010 | SINK 0 message sent to 0
+DEBUG (1): 0:0:29.301498396 | NODE 1: Received broadcast request, delay of: 480 
+DEBUG (2): 0:0:29.301498396 | NODE 2: Received broadcast request, delay of: 452 
+DEBUG (2): 0:0:29.742656260 | NODE 2: Reading average.
+DEBUG (2): 0:0:29.742656270 | NODE 2: sent average, value:26.2317
+DEBUG (0): 0:0:29.749614237 | SINK 0: Received average from 2 , value:26.2317
+DEBUG (1): 0:0:29.769765635 | NODE 1: Reading average.
+DEBUG (1): 0:0:29.769765645 | NODE 1: sent average, value:23.34
+DEBUG (0): 0:0:29.772542728 | SINK 0: Received average from 1 , value:23.34
+----------------------------------SIMULATION: ~ 30  s ----------------------
+
+
+DEBUG (0): 0:0:34.179687510 | SINK 0 message timer fired
+DEBUG (0): 0:0:34.179687510 | SINK 0 message sent to 0
+DEBUG (1): 0:0:34.187698327 | NODE 1: Received broadcast request, delay of: 117 
+DEBUG (2): 0:0:34.187698327 | NODE 2: Received broadcast request, delay of: 176 
+DEBUG (1): 0:0:34.301015635 | NODE 1: Reading average.
+DEBUG (1): 0:0:34.301015645 | NODE 1: sent average, value:24.315
+DEBUG (0): 0:0:34.309835173 | SINK 0: Received average from 1 , value:24.315
+DEBUG (2): 0:0:34.358867197 | NODE 2: Reading average.
+DEBUG (2): 0:0:34.358867207 | NODE 2: sent average, value:27.695
+DEBUG (0): 0:0:34.367488373 | SINK 0: Received average from 2 , value:27.695
+
+
+DEBUG (0): 0:0:39.062500010 | SINK 0 message timer fired
+DEBUG (0): 0:0:39.062500010 | SINK 0 message sent to 2
+DEBUG (2): 0:0:39.073745671 | NODE 2: Reading average.
+DEBUG (2): 0:0:39.073745681 | NODE 2: sent average, value:27.695
+DEBUG (0): 0:0:39.083511249 | SINK 0: Received average from 2 , value:27.695
+----------------------------------SIMULATION: ~ 40  s ----------------------
+
+
+DEBUG (0): 0:0:43.945312510 | SINK 0 message timer fired
+DEBUG (0): 0:0:43.945312510 | SINK 0 message sent to 3
+DEBUG (3): 0:0:43.947052001 | NODE 3: Reading average.
+DEBUG (3): 0:0:43.947052011 | NODE 3: sent average, value:13.4733
+DEBUG (0): 0:0:43.951827984 | SINK 0: Received average from 3 , value:13.4733
+
+
+DEBUG (0): 0:0:48.828125010 | SINK 0 message timer fired
+DEBUG (0): 0:0:48.828125010 | SINK 0 message sent to 1
+----------------------------------SIMULATION: ~ 50  s ----------------------
+
+
+DEBUG (0): 0:0:53.710937510 | SINK 0 message timer fired
+DEBUG (0): 0:0:53.710937510 | SINK 0 message sent to 0
+DEBUG (1): 0:0:53.713806145 | NODE 1: Received broadcast request, delay of: 497 
+DEBUG (2): 0:0:53.713806145 | NODE 2: Received broadcast request, delay of: 246 
+DEBUG (2): 0:0:53.953593760 | NODE 2: Reading average.
+DEBUG (2): 0:0:53.953593770 | NODE 2: sent average, value:24.2717
+DEBUG (0): 0:0:53.956370853 | SINK 0: Received average from 2 , value:24.2717
+DEBUG (1): 0:0:54.198476572 | NODE 1: Reading average.
+DEBUG (1): 0:0:54.198476582 | NODE 1: sent average, value:24.215
+DEBUG (0): 0:0:54.204915753 | SINK 0: Received average from 1 , value:24.215
+
+
+DEBUG (0): 0:0:58.593750010 | SINK 0 message timer fired
+DEBUG (0): 0:0:58.593750010 | SINK 0 message sent to 1
+DEBUG (1): 0:0:58.598052963 | NODE 1: Reading average.
+DEBUG (1): 0:0:58.598052973 | NODE 1: sent average, value:24.215
+DEBUG (0): 0:0:58.600387554 | SINK 0: Received average from 1 , value:24.215
+----------------------------------SIMULATION: ~ 60  s ----------------------
+
+
+DEBUG (0): 0:1:3.476562510 | SINK 0 message timer fired
+DEBUG (0): 0:1:3.476562510 | SINK 0 message sent to 0
+DEBUG (1): 0:1:3.481414776 | NODE 1: Received broadcast request, delay of: 303 
+DEBUG (2): 0:1:3.481414776 | NODE 2: Received broadcast request, delay of: 454 
+DEBUG (1): 0:1:3.776601572 | NODE 1: Reading average.
+DEBUG (1): 0:1:3.776601582 | NODE 1: sent average, value:25.545
+DEBUG (0): 0:1:3.780141600 | SINK 0: Received average from 1 , value:25.545
+DEBUG (2): 0:1:3.924296885 | NODE 2: Reading average.
+DEBUG (2): 0:1:3.924296895 | NODE 2: sent average, value:25.3733
+DEBUG (0): 0:1:3.927211306 | SINK 0: Received average from 2 , value:25.3733
+
+
+DEBUG (0): 0:1:8.359375010 | SINK 0 message timer fired
+DEBUG (0): 0:1:8.359375010 | SINK 0 message sent to 2
+DEBUG (2): 0:1:8.360610964 | NODE 2: Reading average.
+DEBUG (2): 0:1:8.360610974 | NODE 2: sent average, value:25.3733
+DEBUG (0): 0:1:8.363174436 | SINK 0: Received average from 2 , value:25.3733
+----------------------------------SIMULATION: ~ 70  s ----------------------
+
+
+DEBUG (0): 0:1:13.242187510 | SINK 0 message timer fired
+DEBUG (0): 0:1:13.242187510 | SINK 0 message sent to 3
+
+
+DEBUG (0): 0:1:18.125000010 | SINK 0 message timer fired
+DEBUG (0): 0:1:18.125000010 | SINK 0 message sent to 3
+----------------------------------SIMULATION: ~ 80  s ----------------------
+
+
+DEBUG (0): 0:1:23.007812510 | SINK 0 message timer fired
+DEBUG (0): 0:1:23.007812510 | SINK 0 message sent to 3
+DEBUG (3): 0:1:23.009292603 | NODE 3: Reading average.
+DEBUG (3): 0:1:23.009292613 | NODE 3: sent average, value:20.5267
+DEBUG (0): 0:1:23.010818483 | SINK 0: Received average from 3 , value:20.5267
+
+
+DEBUG (0): 0:1:27.890625010 | SINK 0 message timer fired
+DEBUG (0): 0:1:27.890625010 | SINK 0 message sent to 1
+DEBUG (1): 0:1:27.896652196 | NODE 1: Reading average.
+DEBUG (1): 0:1:27.896652206 | NODE 1: sent average, value:36.1817
+DEBUG (0): 0:1:27.901626542 | SINK 0: Received average from 1 , value:36.1817
+----------------------------------SIMULATION: ~ 90  s ----------------------
+
+
+DEBUG (0): 0:1:32.773437510 | SINK 0 message timer fired
+DEBUG (0): 0:1:32.773437510 | SINK 0 message sent to 0
+DEBUG (1): 0:1:32.780517546 | NODE 1: Received broadcast request, delay of: 355 
+DEBUG (2): 0:1:32.780517546 | NODE 2: Received broadcast request, delay of: 300 
+DEBUG (3): 0:1:32.780517546 | NODE 3: Received broadcast request, delay of: 181 
+DEBUG (3): 0:1:32.956757822 | NODE 3: Reading average.
+DEBUG (3): 0:1:32.956757832 | NODE 3: sent average, value:25.7667
+DEBUG (2): 0:1:33.072734385 | NODE 2: Reading average.
+DEBUG (2): 0:1:33.072734395 | NODE 2: sent average, value:25.3533
+DEBUG (0): 0:1:33.079936501 | SINK 0: Received average from 2 , value:25.3533
+DEBUG (1): 0:1:33.127187510 | NODE 1: Reading average.
+DEBUG (1): 0:1:33.127187520 | NODE 1: sent average, value:28.01
+DEBUG (0): 0:1:33.132589099 | SINK 0: Received average from 1 , value:28.01
+
+
+DEBUG (0): 0:1:37.656250010 | SINK 0 message timer fired
+DEBUG (0): 0:1:37.656250010 | SINK 0 message sent to 0
+DEBUG (1): 0:1:37.661621072 | NODE 1: Received broadcast request, delay of: 277 
+DEBUG (2): 0:1:37.661621072 | NODE 2: Received broadcast request, delay of: 166 
+DEBUG (3): 0:1:37.661621072 | NODE 3: Received broadcast request, delay of: 293 
+DEBUG (2): 0:1:37.823710947 | NODE 2: Reading average.
+DEBUG (2): 0:1:37.823710957 | NODE 2: sent average, value:22.9617
+DEBUG (0): 0:1:37.825007947 | SINK 0: Received average from 2 , value:22.9617
+DEBUG (1): 0:1:37.931875010 | NODE 1: Reading average.
+DEBUG (1): 0:1:37.931875020 | NODE 1: sent average, value:27.0117
+DEBUG (0): 0:1:37.940206270 | SINK 0: Received average from 1 , value:27.0117
+DEBUG (3): 0:1:37.946992197 | NODE 3: Reading average.
+DEBUG (3): 0:1:37.946992207 | NODE 3: sent average, value:26.6833
+----------------------------------SIMULATION: ~ 100  s ----------------------
+
+
+DEBUG (0): 0:1:42.539062510 | SINK 0 message timer fired
+DEBUG (0): 0:1:42.539062510 | SINK 0 message sent to 3
+DEBUG (3): 0:1:42.540130619 | NODE 3: Reading average.
+DEBUG (3): 0:1:42.540130629 | NODE 3: sent average, value:26.6833
+
+
+DEBUG (0): 0:1:47.421875010 | SINK 0 message timer fired
+DEBUG (0): 0:1:47.421875010 | SINK 0 message sent to 1
+DEBUG (1): 0:1:47.428787201 | NODE 1: Reading average.
+DEBUG (1): 0:1:47.428787211 | NODE 1: sent average, value:20.5417
+DEBUG (0): 0:1:47.432815507 | SINK 0: Received average from 1 , value:20.5417
+----------------------------------SIMULATION: ~ 110  s ----------------------
+
+
+DEBUG (0): 0:1:52.304687510 | SINK 0 message timer fired
+DEBUG (0): 0:1:52.304687510 | SINK 0 message sent to 1
+DEBUG (1): 0:1:52.314742993 | NODE 1: Reading average.
+DEBUG (1): 0:1:52.314743003 | NODE 1: sent average, value:12.6867
+DEBUG (0): 0:1:52.324355984 | SINK 0: Received average from 1 , value:12.6867
+
+
+DEBUG (0): 0:1:57.187500010 | SINK 0 message timer fired
+DEBUG (0): 0:1:57.187500010 | SINK 0 message sent to 1
+DEBUG (1): 0:1:57.190032954 | NODE 1: Reading average.
+DEBUG (1): 0:1:57.190032964 | NODE 1: sent average, value:12.6867
+DEBUG (0): 0:1:57.196227996 | SINK 0: Received average from 1 , value:12.6867
+----------------------------------SIMULATION: ~ 120  s ----------------------
+
+
+DEBUG (0): 0:2:2.070312510 | SINK 0 message timer fired
+DEBUG (0): 0:2:2.070312510 | SINK 0 message sent to 0
+DEBUG (1): 0:2:2.074478135 | NODE 1: Received broadcast request, delay of: 7 
+DEBUG (2): 0:2:2.074478135 | NODE 2: Received broadcast request, delay of: 225 
+DEBUG (3): 0:2:2.074478135 | NODE 3: Received broadcast request, delay of: 452 
+DEBUG (1): 0:2:2.082265635 | NODE 1: Reading average.
+DEBUG (1): 0:2:2.082265645 | NODE 1: sent average, value:19.4967
+DEBUG (2): 0:2:2.293437510 | NODE 2: Reading average.
+DEBUG (2): 0:2:2.293437520 | NODE 2: sent average, value:20.02
+DEBUG (0): 0:2:2.295588996 | SINK 0: Received average from 2 , value:20.02
+DEBUG (3): 0:2:2.515351572 | NODE 3: Reading average.
+DEBUG (3): 0:2:2.515351582 | NODE 3: sent average, value:25.17
+
+
+DEBUG (0): 0:2:6.953125010 | SINK 0 message timer fired
+DEBUG (0): 0:2:6.953125010 | SINK 0 message sent to 1
+DEBUG (1): 0:2:6.955398556 | NODE 1: Reading average.
+DEBUG (1): 0:2:6.955398566 | NODE 1: sent average, value:19.4967
+DEBUG (0): 0:2:6.959045395 | SINK 0: Received average from 1 , value:19.4967
+----------------------------------SIMULATION: ~ 130  s ----------------------
+
+
+DEBUG (0): 0:2:11.835937510 | SINK 0 message timer fired
+DEBUG (0): 0:2:11.835937510 | SINK 0 message sent to 3
+
+
+DEBUG (0): 0:2:16.718750010 | SINK 0 message timer fired
+DEBUG (0): 0:2:16.718750010 | SINK 0 message sent to 2
+DEBUG (2): 0:2:16.727401692 | NODE 2: Reading average.
+DEBUG (2): 0:2:16.727401702 | NODE 2: sent average, value:14.5267
+DEBUG (0): 0:2:16.733489924 | SINK 0: Received average from 2 , value:14.5267
+----------------------------------SIMULATION: ~ 140  s ----------------------
+
+
+DEBUG (0): 0:2:21.601562510 | SINK 0 message timer fired
+DEBUG (0): 0:2:21.601562510 | SINK 0 message sent to 0
+DEBUG (1): 0:2:21.610626177 | NODE 1: Received broadcast request, delay of: 370 
+DEBUG (2): 0:2:21.610626177 | NODE 2: Received broadcast request, delay of: 323 
+DEBUG (3): 0:2:21.610626177 | NODE 3: Received broadcast request, delay of: 335 
+DEBUG (2): 0:2:21.925273447 | NODE 2: Reading average.
+DEBUG (2): 0:2:21.925273457 | NODE 2: sent average, value:21.4567
+DEBUG (0): 0:2:21.927058725 | SINK 0: Received average from 2 , value:21.4567
+DEBUG (3): 0:2:21.937226572 | NODE 3: Reading average.
+DEBUG (3): 0:2:21.937226582 | NODE 3: sent average, value:25.2783
+DEBUG (1): 0:2:21.971914072 | NODE 1: Reading average.
+DEBUG (1): 0:2:21.971914082 | NODE 1: sent average, value:28.49
+DEBUG (0): 0:2:21.980550506 | SINK 0: Received average from 1 , value:28.49
+
+
+DEBUG (0): 0:2:26.484375010 | SINK 0 message timer fired
+DEBUG (0): 0:2:26.484375010 | SINK 0 message sent to 3
+DEBUG (3): 0:2:26.488067615 | NODE 3: Reading average.
+DEBUG (3): 0:2:26.488067625 | NODE 3: sent average, value:25.2783
+----------------------------------SIMULATION: ~ 150  s ----------------------
+
+
+DEBUG (0): 0:2:31.367187510 | SINK 0 message timer fired
+DEBUG (0): 0:2:31.367187510 | SINK 0 message sent to 1
+DEBUG (1): 0:2:31.370132439 | NODE 1: Reading average.
+DEBUG (1): 0:2:31.370132449 | NODE 1: sent average, value:24.8967
+DEBUG (0): 0:2:31.375411959 | SINK 0: Received average from 1 , value:24.8967
+
+
+DEBUG (0): 0:2:36.250000010 | SINK 0 message timer fired
+DEBUG (0): 0:2:36.250000010 | SINK 0 message sent to 2
+DEBUG (2): 0:2:36.258590658 | NODE 2: Reading average.
+DEBUG (2): 0:2:36.258590668 | NODE 2: sent average, value:22.185
+DEBUG (0): 0:2:36.266738813 | SINK 0: Received average from 2 , value:22.185
+----------------------------------SIMULATION: ~ 160  s ----------------------
+
+
+DEBUG (0): 0:2:41.132812510 | SINK 0 message timer fired
+DEBUG (0): 0:2:41.132812510 | SINK 0 message sent to 0
+DEBUG (1): 0:2:41.139526338 | NODE 1: Received broadcast request, delay of: 130 
+DEBUG (2): 0:2:41.139526338 | NODE 2: Received broadcast request, delay of: 177 
+DEBUG (1): 0:2:41.265859385 | NODE 1: Reading average.
+DEBUG (1): 0:2:41.265859395 | NODE 1: sent average, value:27.695
+DEBUG (0): 0:2:41.269002687 | SINK 0: Received average from 1 , value:27.695
+DEBUG (2): 0:2:41.311992197 | NODE 2: Reading average.
+DEBUG (2): 0:2:41.311992207 | NODE 2: sent average, value:19.3733
+DEBUG (0): 0:2:41.315013430 | SINK 0: Received average from 2 , value:19.3733
+
+
+DEBUG (0): 0:2:46.015625010 | SINK 0 message timer fired
+DEBUG (0): 0:2:46.015625010 | SINK 0 message sent to 3
+----------------------------------SIMULATION: ~ 170  s ----------------------
+
+
+DEBUG (0): 0:2:50.898437510 | SINK 0 message timer fired
+DEBUG (0): 0:2:50.898437510 | SINK 0 message sent to 2
+DEBUG (2): 0:2:50.904663059 | NODE 2: Reading average.
+DEBUG (2): 0:2:50.904663069 | NODE 2: sent average, value:18.9283
+DEBUG (0): 0:2:50.906326267 | SINK 0: Received average from 2 , value:18.9283
+
+
+DEBUG (0): 0:2:55.781250010 | SINK 0 message timer fired
+DEBUG (0): 0:2:55.781250010 | SINK 0 message sent to 1
+DEBUG (1): 0:2:55.784454337 | NODE 1: Reading average.
+DEBUG (1): 0:2:55.784454347 | NODE 1: sent average, value:23.9083
+DEBUG (0): 0:2:55.791503866 | SINK 0: Received average from 1 , value:23.9083
+----------------------------------SIMULATION: ~ 180  s ----------------------
+
+
+DEBUG (0): 0:3:0.664062510 | SINK 0 message timer fired
+DEBUG (0): 0:3:0.664062510 | SINK 0 message sent to 3
+DEBUG (3): 0:3:0.675872743 | NODE 3: Reading average.
+DEBUG (3): 0:3:0.675872753 | NODE 3: sent average, value:20.6133
+
+
+DEBUG (0): 0:3:5.546875010 | SINK 0 message timer fired
+DEBUG (0): 0:3:5.546875010 | SINK 0 message sent to 1
+DEBUG (1): 0:3:5.549102780 | NODE 1: Reading average.
+DEBUG (1): 0:3:5.549102790 | NODE 1: sent average, value:19.18
+DEBUG (0): 0:3:5.551086421 | SINK 0: Received average from 1 , value:19.18
+----------------------------------SIMULATION: ~ 190  s ----------------------
+
+
+DEBUG (0): 0:3:10.429687510 | SINK 0 message timer fired
+DEBUG (0): 0:3:10.429687510 | SINK 0 message sent to 3
+DEBUG (3): 0:3:10.430908206 | NODE 3: Reading average.
+DEBUG (3): 0:3:10.430908216 | NODE 3: sent average, value:27.2
+
+
+DEBUG (0): 0:3:15.312500010 | SINK 0 message timer fired
+DEBUG (0): 0:3:15.312500010 | SINK 0 message sent to 1
+DEBUG (1): 0:3:15.317520122 | NODE 1: Reading average.
+DEBUG (1): 0:3:15.317520132 | NODE 1: sent average, value:14.535
+DEBUG (0): 0:3:15.323989821 | SINK 0: Received average from 1 , value:14.535
+----------------------------------SIMULATION: ~ 200  s ----------------------
+
+
+DEBUG (0): 0:3:20.195312510 | SINK 0 message timer fired
+DEBUG (0): 0:3:20.195312510 | SINK 0 message sent to 3
+
+
+DEBUG (0): 0:3:25.078125010 | SINK 0 message timer fired
+DEBUG (0): 0:3:25.078125010 | SINK 0 message sent to 0
+DEBUG (1): 0:3:25.081069939 | NODE 1: Received broadcast request, delay of: 115 
+DEBUG (2): 0:3:25.081069939 | NODE 2: Received broadcast request, delay of: 441 
+DEBUG (3): 0:3:25.081069939 | NODE 3: Received broadcast request, delay of: 8 
+DEBUG (3): 0:3:25.088593760 | NODE 3: Reading average.
+DEBUG (3): 0:3:25.088593770 | NODE 3: sent average, value:21.8183
+DEBUG (1): 0:3:25.192617197 | NODE 1: Reading average.
+DEBUG (1): 0:3:25.192617207 | NODE 1: sent average, value:16.71
+DEBUG (0): 0:3:25.199910866 | SINK 0: Received average from 1 , value:16.71
+DEBUG (2): 0:3:25.511210947 | NODE 2: Reading average.
+DEBUG (2): 0:3:25.511210957 | NODE 2: sent average, value:23.7283
+DEBUG (0): 0:3:25.517543318 | SINK 0: Received average from 2 , value:23.7283
+
+
+DEBUG (0): 0:3:29.960937510 | SINK 0 message timer fired
+DEBUG (0): 0:3:29.960937510 | SINK 0 message sent to 1
+DEBUG (1): 0:3:29.964248647 | NODE 1: Reading average.
+DEBUG (1): 0:3:29.964248657 | NODE 1: sent average, value:16.71
+DEBUG (0): 0:3:29.967285139 | SINK 0: Received average from 1 , value:16.71
+----------------------------------SIMULATION: ~ 210  s ----------------------
+
+
+DEBUG (0): 0:3:34.843750010 | SINK 0 message timer fired
+DEBUG (0): 0:3:34.843750010 | SINK 0 message sent to 0
+DEBUG (1): 0:3:34.847427356 | NODE 1: Received broadcast request, delay of: 312 
+DEBUG (2): 0:3:34.847427356 | NODE 2: Received broadcast request, delay of: 468 
+DEBUG (1): 0:3:35.151601572 | NODE 1: Reading average.
+DEBUG (1): 0:3:35.151601582 | NODE 1: sent average, value:15.745
+DEBUG (0): 0:3:35.156026605 | SINK 0: Received average from 1 , value:15.745
+DEBUG (2): 0:3:35.304179697 | NODE 2: Reading average.
+DEBUG (2): 0:3:35.304179707 | NODE 2: sent average, value:21.8367
+DEBUG (0): 0:3:35.312282077 | SINK 0: Received average from 2 , value:21.8367
+
+
+DEBUG (0): 0:3:39.726562510 | SINK 0 message timer fired
+DEBUG (0): 0:3:39.726562510 | SINK 0 message sent to 1
+DEBUG (1): 0:3:39.731277448 | NODE 1: Reading average.
+DEBUG (1): 0:3:39.731277458 | NODE 1: sent average, value:15.745
+DEBUG (0): 0:3:39.740035952 | SINK 0: Received average from 1 , value:15.745
+----------------------------------SIMULATION: ~ 220  s ----------------------
+
+
+DEBUG (0): 0:3:44.609375010 | SINK 0 message timer fired
+DEBUG (0): 0:3:44.609375010 | SINK 0 message sent to 1
+DEBUG (1): 0:3:44.615814181 | NODE 1: Reading average.
+DEBUG (1): 0:3:44.615814191 | NODE 1: sent average, value:21.1533
+DEBUG (0): 0:3:44.623504576 | SINK 0: Received average from 1 , value:21.1533
+
+
+DEBUG (0): 0:3:49.492187510 | SINK 0 message timer fired
+DEBUG (0): 0:3:49.492187510 | SINK 0 message sent to 0
+DEBUG (1): 0:3:49.499710049 | NODE 1: Received broadcast request, delay of: 85 
+DEBUG (2): 0:3:49.499710049 | NODE 2: Received broadcast request, delay of: 342 
+DEBUG (1): 0:3:49.582265635 | NODE 1: Reading average.
+DEBUG (1): 0:3:49.582265645 | NODE 1: sent average, value:19.1783
+DEBUG (0): 0:3:49.586385494 | SINK 0: Received average from 1 , value:19.1783
+DEBUG (2): 0:3:49.833476572 | NODE 2: Reading average.
+DEBUG (2): 0:3:49.833476582 | NODE 2: sent average, value:22.3733
+DEBUG (0): 0:3:49.836696168 | SINK 0: Received average from 2 , value:22.3733
+----------------------------------SIMULATION: ~ 230  s ----------------------
+
+
+DEBUG (0): 0:3:54.375000010 | SINK 0 message timer fired
+DEBUG (0): 0:3:54.375000010 | SINK 0 message sent to 3
+
+
+DEBUG (0): 0:3:59.257812510 | SINK 0 message timer fired
+DEBUG (0): 0:3:59.257812510 | SINK 0 message sent to 2
+DEBUG (2): 0:3:59.265777551 | NODE 2: Reading average.
+DEBUG (2): 0:3:59.265777561 | NODE 2: sent average, value:22.495
+DEBUG (0): 0:3:59.276260288 | SINK 0: Received average from 2 , value:22.495
+----------------------------------SIMULATION: ~ 240  s ----------------------
+
+
+DEBUG (0): 0:4:4.140625010 | SINK 0 message timer fired
+DEBUG (0): 0:4:4.140625010 | SINK 0 message sent to 1
+DEBUG (1): 0:4:4.144119252 | NODE 1: Reading average.
+DEBUG (1): 0:4:4.144119262 | NODE 1: sent average, value:26.4333
+DEBUG (0): 0:4:4.146285997 | SINK 0: Received average from 1 , value:26.4333
+
+
+DEBUG (0): 0:4:9.023437510 | SINK 0 message timer fired
+DEBUG (0): 0:4:9.023437510 | SINK 0 message sent to 1
+DEBUG (1): 0:4:9.031616173 | NODE 1: Reading average.
+DEBUG (1): 0:4:9.031616183 | NODE 1: sent average, value:26.895
+DEBUG (0): 0:4:9.040435711 | SINK 0: Received average from 1 , value:26.895
+----------------------------------END OF SIMULATION-------------------------------------

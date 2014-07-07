@@ -12,7 +12,4 @@ implementation{
 		post fakeMeasurement();
 		return SUCCESS;
 	}
-
-	
-
 }
